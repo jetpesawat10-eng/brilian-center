@@ -1,0 +1,375 @@
+﻿/* =========================================================
+   BRILIaN CENTER — CREAM & WHITE THEME
+   Visual override only
+   Tidak mengubah logic PHP / database
+   ========================================================= */
+
+:root {
+    --primary: #8B7355;
+    --primary-dark: #735E46;
+    --bg: #F7F3EA;
+    --card-bg: #FFFFFF;
+    --text: #3F3A33;
+    --muted: #756E63;
+    --border: #E3D9C8;
+
+    --cream: #E8DCC8;
+    --cream-soft: #EFE7D8;
+    --white: #FFFFFF;
+
+    --danger: #C0392B;
+    --warning: #B8860B;
+    --success: #4F7A5A;
+}
+
+/* Global */
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Header */
+header,
+.navbar,
+.topbar {
+    background: var(--white) !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.brand,
+.logo,
+.navbar-brand {
+    color: var(--primary-dark) !important;
+}
+
+/* Links */
+a {
+    color: var(--primary-dark);
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+/* Cards */
+.card,
+.room-card,
+.stat-card,
+.history-card,
+.admin-card {
+    background: var(--white);
+    border-color: var(--border);
+}
+
+/* Buttons utama */
+.btn-primary,
+.btn-submit,
+button[type="submit"] {
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: var(--white) !important;
+}
+
+.btn-primary:hover,
+.btn-submit:hover,
+button[type="submit"]:hover {
+    background: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+/* Input */
+input,
+select,
+textarea {
+    border-color: var(--border);
+    background: var(--white);
+    color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(139,115,85,.12);
+    outline: none;
+}
+
+/* Table */
+table {
+    background: var(--white);
+}
+
+th {
+    background: var(--cream-soft) !important;
+    color: var(--primary-dark) !important;
+}
+
+td {
+    border-color: var(--border);
+}
+
+/* Room catalog */
+.room-card {
+    box-shadow: 0 4px 14px rgba(63,58,51,.06);
+}
+
+.room-card:hover {
+    border-color: var(--cream);
+    box-shadow: 0 8px 22px rgba(63,58,51,.10);
+}
+
+/* Modal */
+.modal-content {
+    background: var(--white);
+    border: 1px solid var(--border);
+}
+
+.modal-header {
+    background: var(--cream-soft);
+    border-bottom: 1px solid var(--border);
+}
+
+/* Status */
+.status-approved,
+.badge-approved {
+    background: #E6F0E7 !important;
+    color: #416348 !important;
+}
+
+.status-pending,
+.badge-pending {
+    background: #F8EFD8 !important;
+    color: #80651F !important;
+}
+
+.status-rejected,
+.badge-rejected {
+    background: #F8E5E1 !important;
+    color: #8A3025 !important;
+}
+
+/* Alert */
+.alert-success {
+    background: #E6F0E7 !important;
+    color: #416348 !important;
+    border-color: #C7DDCB !important;
+}
+
+.alert-danger {
+    background: #F8E5E1 !important;
+    color: #8A3025 !important;
+    border-color: #E8C5BE !important;
+}
+
+/* Footer */
+footer {
+    background: var(--white);
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+    background: #CDBFA9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* =========================================================
+   BRILIaN CENTER — USER AREA CREAM WHITE FINAL OVERRIDE
+   ========================================================= */
+
+/* BACKGROUND USER */
+body:not(.login-page) {
+    background: #F7F3EA !important;
+    color: #3F3A33;
+}
+
+/* NAVBAR */
+body:not(.login-page) header,
+body:not(.login-page) .navbar {
+    background: #FFFFFF !important;
+    border-bottom: 1px solid #E3D9C8 !important;
+    box-shadow: 0 3px 14px rgba(63,58,51,.07) !important;
+}
+
+/* BRAND BRILIaN CENTER */
+body:not(.login-page) .navbar .brand {
+    color: #8B7355 !important;
+}
+
+body:not(.login-page) .navbar nav a {
+    color: #756E63 !important;
+}
+
+body:not(.login-page) .navbar nav a:hover {
+    color: #8B7355 !important;
+}
+
+/* JUDUL */
+body:not(.login-page) h2,
+body:not(.login-page) .flex-between h2 {
+    color: #3F3A33 !important;
+}
+
+/* BUTTON UMUM */
+body:not(.login-page) .btn {
+    background: #8B7355 !important;
+    border-color: #8B7355 !important;
+    color: #FFFFFF !important;
+}
+
+body:not(.login-page) .btn:hover {
+    background: #735E46 !important;
+    border-color: #735E46 !important;
+    color: #FFFFFF !important;
+}
+
+/* BUTTON PILIH RUANGAN */
+body:not(.login-page) .room-card .btn,
+body:not(.login-page) .room-card a.btn,
+body:not(.login-page) .room-card button {
+    background: #8B7355 !important;
+    color: #FFFFFF !important;
+    border-color: #8B7355 !important;
+}
+
+body:not(.login-page) .room-card .btn:hover,
+body:not(.login-page) .room-card a.btn:hover,
+body:not(.login-page) .room-card button:hover,
+body:not(.login-page) .room-card:hover .btn {
+    background: #735E46 !important;
+    color: #FFFFFF !important;
+    border-color: #735E46 !important;
+}
+
+/* STAT CARD */
+body:not(.login-page) .stat-box {
+    background: #FFFFFF !important;
+    border-color: #E3D9C8 !important;
+    box-shadow: 0 7px 24px rgba(63,58,51,.06) !important;
+}
+
+body:not(.login-page) .stat-box .num {
+    color: #8B7355 !important;
+}
+
+body:not(.login-page) .stat-box .label {
+    color: #756E63 !important;
+}
+
+/* CARD */
+body:not(.login-page) .card,
+body:not(.login-page) form > .card {
+    background: #FFFFFF !important;
+    border-color: #E3D9C8 !important;
+    box-shadow: 0 7px 24px rgba(63,58,51,.06) !important;
+}
+
+body:not(.login-page) .card h3,
+body:not(.login-page) form > .card h3 {
+    color: #3F3A33 !important;
+}
+
+/* ROOM GRID */
+body:not(.login-page) .room-card {
+    background: #FFFFFF !important;
+    border-color: #E3D9C8 !important;
+    box-shadow: 0 7px 24px rgba(63,58,51,.07) !important;
+}
+
+body:not(.login-page) .room-card:hover {
+    border-color: #CDBFA9 !important;
+    box-shadow: 0 14px 32px rgba(63,58,51,.10) !important;
+}
+
+/* ROOM TERPILIH */
+body:not(.login-page) .room-card:has(input[type="radio"]:checked) {
+    border-color: #8B7355 !important;
+    box-shadow: 0 0 0 2px rgba(139,115,85,.14) !important;
+}
+
+/* FOTO PLACEHOLDER */
+body:not(.login-page) .room-image {
+    background: #EFE7D8 !important;
+}
+
+body:not(.login-page) .room-placeholder {
+    background: linear-gradient(135deg, #EFE7D8, #F7F3EA) !important;
+    color: #756E63 !important;
+}
+
+/* ROOM TITLE */
+body:not(.login-page) .room-card-body h3 {
+    color: #3F3A33 !important;
+}
+
+/* ROOM META */
+body:not(.login-page) .room-meta {
+    color: #756E63 !important;
+}
+
+/* ROOM DESCRIPTION */
+body:not(.login-page) .room-card-body p {
+    color: #756E63 !important;
+}
+
+/* TABLE */
+body:not(.login-page) th {
+    background: #EFE7D8 !important;
+    color: #5F513F !important;
+    border-bottom-color: #E3D9C8 !important;
+}
+
+body:not(.login-page) td {
+    color: #5F584F !important;
+    border-bottom-color: #EEE8DE !important;
+}
+
+/* INPUT */
+body:not(.login-page) input,
+body:not(.login-page) select,
+body:not(.login-page) textarea {
+    background: #FFFFFF !important;
+    color: #3F3A33 !important;
+    border-color: #E3D9C8 !important;
+}
+
+body:not(.login-page) input:focus,
+body:not(.login-page) select:focus,
+body:not(.login-page) textarea:focus {
+    border-color: #8B7355 !important;
+    box-shadow: 0 0 0 3px rgba(139,115,85,.12) !important;
+}
+
+/* MODAL */
+body:not(.login-page) .modal-content {
+    background: #FFFFFF !important;
+    border-color: #E3D9C8 !important;
+}
+
+body:not(.login-page) .modal-header {
+    background: #EFE7D8 !important;
+    border-bottom-color: #E3D9C8 !important;
+}
+
+/* STATUS TETAP BERWARNA */
+body:not(.login-page) .status-approved,
+body:not(.login-page) .badge-approved {
+    background: #E6F0E7 !important;
+    color: #416348 !important;
+}
+
+body:not(.login-page) .status-pending,
+body:not(.login-page) .badge-pending {
+    background: #F8EFD8 !important;
+    color: #80651F !important;
+}
+
+body:not(.login-page) .status-rejected,
+body:not(.login-page) .badge-rejected {
+    background: #F8E5E1 !important;
+    color: #8A3025 !important;
+}

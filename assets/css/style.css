@@ -1,0 +1,2406 @@
+﻿:root {
+    --primary: #2f6f4f;
+    --primary-dark: #234f38;
+    --bg: #f4f6f5;
+    --card-bg: #ffffff;
+    --text: #23292a;
+    --muted: #6b7573;
+    --border: #e1e6e3;
+    --danger: #c0392b;
+    --warning: #b8860b;
+    --success: #2f6f4f;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.navbar {
+    background: var(--primary-dark);
+    color: #fff;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar .brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.navbar nav a {
+    color: #e8f0eb;
+    margin-left: 18px;
+    font-size: 0.95rem;
+}
+
+.navbar nav a:hover { color: #fff; }
+
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.card h2, .card h3 { margin-top: 0; }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+}
+
+.stat-box {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+}
+.stat-box .num { font-size: 2rem; font-weight: 700; color: var(--primary); }
+.stat-box .label { color: var(--muted); font-size: 0.9rem; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+}
+
+th, td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    font-size: 0.93rem;
+}
+
+th { background: #edf3ef; color: var(--primary-dark); }
+
+.badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #fff;
+}
+.badge-pending { background: var(--warning); }
+.badge-approved { background: var(--success); }
+.badge-rejected { background: var(--danger); }
+.badge-available { background: var(--success); }
+.badge-unavailable { background: var(--danger); }
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    background: var(--primary);
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+.btn:hover { background: var(--primary-dark); text-decoration: none; }
+.btn-sm { padding: 5px 10px; font-size: 0.8rem; }
+.btn-danger { background: var(--danger); }
+.btn-danger:hover { background: #8f291d; }
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+.btn-outline:hover { background: var(--primary); color: #fff; }
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 9px 10px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.alert {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-size: 0.92rem;
+}
+.alert-success { background: #e4f3ea; color: #1e5c3a; border: 1px solid #b9dfc7; }
+.alert-danger { background: #fbe7e4; color: #8a2e22; border: 1px solid #f0c1b8; }
+
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2f6f4f, #1c3d2a);
+}
+
+.auth-box {
+    background: #fff;
+    padding: 36px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 380px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.auth-box h1 {
+    text-align: center;
+    color: var(--primary-dark);
+    font-size: 1.4rem;
+    margin-bottom: 4px;
+}
+.auth-box p.subtitle {
+    text-align: center;
+    color: var(--muted);
+    margin-top: 0;
+    margin-bottom: 22px;
+    font-size: 0.88rem;
+}
+
+.text-muted { color: var(--muted); }
+.flex-between { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mt-0 { margin-top: 0; }
+.small { font-size: 0.85rem; }
+
+.table-wrap { overflow-x: auto; }
+
+.room-thumb{width:72px;height:48px;object-fit:cover;border-radius:6px;border:1px solid var(--border)}
+.room-photo-preview{margin:0 0 12px}.room-photo-preview img{display:block;width:220px;max-width:100%;height:130px;object-fit:cover;border-radius:8px;border:1px solid var(--border)}
+.room-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.room-card{display:block;background:var(--card-bg);border:2px solid var(--border);border-radius:12px;overflow:hidden;cursor:pointer;transition:.15s;position:relative}
+.room-card:hover{border-color:var(--primary);transform:translateY(-1px)}
+.room-card input{position:absolute;opacity:0;pointer-events:none}
+.room-card:has(input:checked){border-color:var(--primary);box-shadow:0 0 0 2px rgba(47,111,79,.12)}
+.room-image{height:170px;background:#eef2ef;overflow:hidden}.room-image img{width:100%;height:100%;object-fit:cover}.room-placeholder{height:100%;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.9rem}
+.room-card-body{padding:16px}.room-card-body h3{margin:0 0 8px}.room-card-body p{color:var(--muted);font-size:.9rem;line-height:1.5;min-height:42px}.room-meta{font-size:.85rem;color:var(--muted);margin-bottom:10px}
+@media(max-width:600px){.room-grid{grid-template-columns:1fr}.room-image{height:190px}}
+
+/* =========================================================
+   BRILIaNT CENTER LOGIN â€” visual refresh
+   ========================================================= */
+.login-page {
+    min-height: 100vh;
+    background: #dfeaf3;
+}
+
+.login-page .auth-wrapper {
+    min-height: 100vh;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 24px 70px;
+    background:
+        linear-gradient(rgba(231, 241, 249, .56), rgba(231, 241, 249, .56)),
+        url('../images/briliant-center-login-bg.png') center / cover no-repeat;
+}
+
+.login-page .auth-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(120deg, rgba(255,255,255,.18), transparent 38%, rgba(255,255,255,.12)),
+        linear-gradient(300deg, rgba(19,73,127,.08), transparent 42%);
+    pointer-events: none;
+}
+
+.login-page .auth-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    left: -230px;
+    bottom: -220px;
+    border: 1px solid rgba(24, 76, 126, .12);
+    transform: rotate(45deg);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.auth-brand {
+    position: absolute;
+    top: 30px;
+    left: 4.2vw;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #124c83;
+}
+
+.brand-mark,
+.auth-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #fff;
+    background: #145493;
+    border-radius: 9px;
+    box-shadow: 0 5px 14px rgba(20,84,147,.18);
+}
+
+.brand-mark {
+    width: 42px;
+    height: 42px;
+    font-size: 27px;
+}
+
+.brand-name {
+    font-size: 1.18rem;
+    font-weight: 800;
+    letter-spacing: .01em;
+}
+
+.brand-subtitle {
+    margin-top: 2px;
+    font-size: .78rem;
+    color: #5d7791;
+}
+
+.auth-motto {
+    position: absolute;
+    top: 36px;
+    right: 4.2vw;
+    color: #5a7690;
+    font-size: .78rem;
+    letter-spacing: .02em;
+}
+
+.auth-motto span { margin: 0 7px; color: #6f8aa1; }
+
+.login-page .auth-box {
+    width: min(100%, 520px);
+    max-width: 520px;
+    padding: 34px 44px 30px;
+    border: 1px solid rgba(255,255,255,.68);
+    border-radius: 18px;
+    background: rgba(247, 251, 254, .76);
+    box-shadow: 0 24px 60px rgba(28, 68, 104, .18), 0 4px 16px rgba(28, 68, 104, .08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.auth-logo {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 10px;
+    border-radius: 12px;
+    font-size: 33px;
+}
+
+.login-page .auth-box h1 {
+    margin: 0;
+    color: #124c83;
+    font-size: 1.65rem;
+    letter-spacing: -.02em;
+}
+
+.login-page .auth-box p.subtitle {
+    margin: 4px 0 0;
+    color: #617c95;
+    font-size: .88rem;
+}
+
+.auth-divider {
+    width: 78%;
+    height: 1px;
+    margin: 20px auto 18px;
+    background: rgba(52, 105, 150, .16);
+}
+
+.login-intro {
+    margin: 0 0 18px;
+    text-align: center;
+    color: #5b7690;
+    font-size: .88rem;
+}
+
+.login-page .auth-box form label {
+    color: #35536d;
+    font-size: .82rem;
+    font-weight: 650;
+    margin: 0 0 7px;
+}
+
+.input-wrap {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.input-wrap input {
+    height: 48px;
+    margin: 0;
+    padding: 0 45px 0 42px;
+    border: 1px solid rgba(100, 137, 166, .28);
+    border-radius: 9px;
+    background: rgba(255,255,255,.68);
+    color: #253f56;
+    font-size: .92rem;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,.7);
+}
+
+.input-wrap input::placeholder { color: #8a9bad; }
+
+.input-wrap input:focus {
+    border-color: #2d70b2;
+    box-shadow: 0 0 0 3px rgba(45,112,178,.10);
+}
+
+.input-icon {
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #5e7890;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #5f7890;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.password-toggle:hover { background: rgba(28,80,130,.07); }
+
+.login-page .auth-submit {
+    width: 100%;
+    height: 50px;
+    margin-top: 2px;
+    border-radius: 9px;
+    background: #145a9e;
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: .01em;
+    box-shadow: 0 8px 18px rgba(20,90,158,.18);
+}
+
+.login-page .auth-submit:hover {
+    background: #0e4b88;
+    transform: translateY(-1px);
+}
+
+.login-alert {
+    margin: 0 0 16px;
+    border-radius: 9px;
+}
+
+.register-link {
+    margin: 17px 0 0;
+    text-align: center;
+    color: #71859a;
+    font-size: .82rem;
+}
+
+.register-link a { color: #145a9e; font-weight: 650; }
+
+.auth-footer {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #5d7690;
+    font-size: .72rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+    .login-page .auth-wrapper {
+        padding: 90px 16px 70px;
+        background-position: 57% center;
+    }
+
+    .auth-brand { left: 20px; top: 20px; }
+    .auth-motto { display: none; }
+    .brand-mark { width: 36px; height: 36px; font-size: 23px; }
+    .brand-name { font-size: 1rem; }
+    .brand-subtitle { font-size: .68rem; }
+
+    .login-page .auth-box {
+        padding: 28px 22px 24px;
+        border-radius: 16px;
+    }
+
+    .login-page .auth-box h1 { font-size: 1.42rem; }
+    .auth-divider { width: 90%; margin-top: 17px; }
+    .auth-footer { bottom: 14px; font-size: .65rem; }
+}
+body.login-page {
+    margin: 0;
+    min-height: 100vh;
+    background: #0e4b88;
+}
+
+body.login-page .auth-wrapper {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 42, 76, 0.72),
+            rgba(25, 94, 148, 0.42)
+        ),
+        url("../images/backround-login.png")
+        center center / cover no-repeat !important;
+
+    overflow: hidden;
+}
+
+/* Hilangkan background/overlay lama */
+body.login-page .auth-wrapper::before {
+    display: none !important;
+}
+
+body.login-page .auth-wrapper::after {
+    display: none !important;
+}
+
+/* Brand kiri atas */
+body.login-page .auth-brand {
+    position: absolute;
+    top: 28px;
+    left: 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #fff;
+    z-index: 5;
+}
+
+body.login-page .brand-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.35);
+
+    color: #fff;
+    font-size: 20px;
+    font-weight: 800;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+body.login-page .brand-name {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+
+body.login-page .brand-subtitle {
+    margin-top: 2px;
+    font-size: 11px;
+    opacity: .82;
+}
+
+/* Motto lama disembunyikan */
+body.login-page .auth-motto {
+    display: none !important;
+}
+
+/* Card login */
+body.login-page .auth-box {
+    position: relative;
+    z-index: 3;
+
+    width: min(420px, 100%);
+    max-width: 420px;
+    box-sizing: border-box;
+
+    padding: 38px 36px 30px;
+
+    border-radius: 24px;
+
+    background: rgba(255,255,255,.82) !important;
+    border: 1px solid rgba(255,255,255,.72);
+
+    box-shadow:
+        0 25px 70px rgba(0,20,45,.32);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+/* Logo B */
+body.login-page .auth-logo {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 14px;
+
+    border-radius: 17px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #145493 !important;
+    color: #fff;
+
+    font-size: 26px;
+    font-weight: 800;
+
+    box-shadow:
+        0 10px 25px rgba(20,84,147,.25);
+}
+
+/* Judul */
+body.login-page .auth-box h1 {
+    margin: 0;
+
+    text-align: center;
+
+    color: #123b5d;
+
+    font-size: 26px;
+    font-weight: 800;
+}
+
+body.login-page .auth-box p.subtitle {
+    margin: 7px 0 22px;
+
+    text-align: center;
+
+    color: #61778a;
+
+    font-size: 13px;
+}
+
+/* Garis */
+body.login-page .auth-divider {
+    height: 1px;
+
+    margin: 0 0 20px;
+
+    background: rgba(35,80,115,.14);
+}
+
+/* Intro */
+body.login-page .login-intro {
+    margin-bottom: 18px;
+
+    color: #405b70;
+
+    font-size: 13px;
+}
+
+/* Label */
+body.login-page .auth-box form label {
+    display: block;
+
+    margin: 14px 0 7px;
+
+    color: #294b64;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Input */
+body.login-page .input-wrap {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+body.login-page .input-icon {
+    display: none !important;
+}
+
+body.login-page .input-wrap input {
+    width: 100%;
+    height: 48px;
+
+    box-sizing: border-box;
+
+    padding: 0 15px;
+
+    border: 1px solid #c8d6e2;
+    border-radius: 12px;
+
+    background: rgba(255,255,255,.90);
+
+    color: #18384f;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+body.login-page .input-wrap input:focus {
+    border-color: #2878b9;
+
+    box-shadow:
+        0 0 0 3px rgba(40,120,185,.13);
+}
+
+/* Password toggle */
+body.login-page .password-toggle {
+    position: absolute;
+
+    right: 7px;
+
+    width: 36px;
+    height: 36px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: transparent;
+
+    color: #507089;
+
+    cursor: pointer;
+}
+
+body.login-page .password-toggle:hover {
+    background: rgba(20,84,147,.08);
+}
+
+/* Tombol login */
+body.login-page .auth-submit {
+    width: 100%;
+    height: 48px;
+
+    margin-top: 22px;
+
+    border: 0;
+    border-radius: 12px;
+
+    background: #145a9e !important;
+
+    color: #fff;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 22px rgba(20,90,158,.22);
+}
+
+body.login-page .auth-submit:hover {
+    background: #0e4b88 !important;
+}
+
+/* Register */
+body.login-page .register-link {
+    margin: 20px 0 0;
+
+    text-align: center;
+
+    color: #61778a;
+
+    font-size: 13px;
+}
+
+body.login-page .register-link a {
+    color: #145a9e;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+body.login-page .register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+body.login-page .auth-footer {
+    position: absolute;
+
+    bottom: 18px;
+
+    z-index: 5;
+
+    color: rgba(255,255,255,.80);
+
+    font-size: 11px;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body.login-page .auth-brand {
+        top: 18px;
+        left: 18px;
+    }
+
+    body.login-page .brand-name {
+        font-size: 15px;
+    }
+
+    body.login-page .brand-subtitle {
+        font-size: 9px;
+    }
+
+    body.login-page .auth-box {
+        width: calc(100% - 8px);
+
+        padding: 30px 24px 25px;
+
+        border-radius: 20px;
+    }
+
+    body.login-page .auth-box h1 {
+        font-size: 22px;
+    }
+
+    body.login-page .auth-footer {
+        display: none;
+    }
+}
+
+/* =========================================================
+   BRILIaNT CENTER — USER DASHBOARD
+   ========================================================= */
+
+body:not(.login-page) {
+    background: #f3f7fb;
+}
+
+/* HEADER / NAVBAR */
+body:not(.login-page) header,
+body:not(.login-page) .navbar {
+    background: linear-gradient(135deg, #0e4b88, #1769a8) !important;
+    border-bottom: 0 !important;
+    box-shadow: 0 4px 18px rgba(14,75,136,.16);
+}
+
+/* CONTAINER */
+body:not(.login-page) main,
+body:not(.login-page) .container {
+    max-width: 1180px;
+}
+
+/* GREETING */
+body:not(.login-page) .flex-between h2 {
+    color: #163b5a;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+/* BUTTON AJUKAN */
+body:not(.login-page) .flex-between .btn {
+    background: #145a9e !important;
+    border-radius: 11px;
+    padding: 11px 18px;
+    font-weight: 700;
+    box-shadow: 0 7px 18px rgba(20,90,158,.18);
+    transition: .18s ease;
+}
+
+body:not(.login-page) .flex-between .btn:hover {
+    background: #0e4b88 !important;
+    transform: translateY(-1px);
+}
+
+/* STAT CARD */
+body:not(.login-page) .stat-box {
+    background: #fff !important;
+    border: 1px solid #e0e9f1 !important;
+    border-radius: 16px !important;
+    padding: 22px !important;
+    box-shadow: 0 7px 24px rgba(25,60,90,.07);
+    transition: .18s ease;
+}
+
+body:not(.login-page) .stat-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(25,60,90,.10);
+}
+
+body:not(.login-page) .stat-box .num {
+    color: #145a9e !important;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+body:not(.login-page) .stat-box .label {
+    color: #687f91 !important;
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+/* RIWAYAT CARD */
+body:not(.login-page) .card {
+    background: #fff !important;
+    border: 1px solid #e0e9f1 !important;
+    border-radius: 17px !important;
+    box-shadow: 0 7px 24px rgba(25,60,90,.06);
+    overflow: hidden;
+}
+
+body:not(.login-page) .card h3 {
+    color: #163b5a;
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+/* TABLE */
+body:not(.login-page) table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+body:not(.login-page) th {
+    background: #edf5fb !important;
+    color: #31546e !important;
+    font-size: 12px;
+    font-weight: 700;
+    border-bottom: 1px solid #dce8f1;
+}
+
+body:not(.login-page) td {
+    color: #405d73;
+    border-bottom: 1px solid #edf2f6;
+}
+
+body:not(.login-page) tr:last-child td {
+    border-bottom: 0;
+}
+
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+    body:not(.login-page) .flex-between {
+        align-items: flex-start;
+        gap: 14px;
+        flex-direction: column;
+    }
+
+    body:not(.login-page) .flex-between h2 {
+        font-size: 21px;
+    }
+
+    body:not(.login-page) .flex-between .btn {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    body:not(.login-page) .stat-box {
+        padding: 18px !important;
+    }
+
+    body:not(.login-page) .table-wrap {
+        overflow-x: auto;
+    }
+}
+
+
+/* =========================================================
+   BRILIaNT CENTER — TOMBOL PILIH RUANGAN
+   ========================================================= */
+
+body:not(.login-page) .room-card .btn,
+body:not(.login-page) .room-card a.btn,
+body:not(.login-page) .room-card button {
+    background: #145a9e !important;
+    color: #ffffff !important;
+    border-color: #145a9e !important;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: .18s ease;
+}
+
+body:not(.login-page) .room-card .btn:hover,
+body:not(.login-page) .room-card a.btn:hover,
+body:not(.login-page) .room-card button:hover {
+    background: #0e4b88 !important;
+    color: #ffffff !important;
+    border-color: #0e4b88 !important;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   BRILIaNT CENTER — HALAMAN AJUKAN PEMINJAMAN
+   ========================================================= */
+
+body:not(.login-page) h2 {
+    color: #163b5a;
+    font-weight: 800;
+}
+
+/* GRID KATALOG */
+body:not(.login-page) .room-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 20px;
+}
+
+/* ROOM CARD */
+body:not(.login-page) .room-card {
+    display: block;
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #dfe9f2;
+    border-radius: 17px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 7px 24px rgba(25,60,90,.07);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+body:not(.login-page) .room-card:hover {
+    transform: translateY(-4px);
+    border-color: #8bb8dc;
+    box-shadow: 0 14px 32px rgba(20,90,158,.14);
+}
+
+/* RADIO DISEMBUNYIKAN */
+body:not(.login-page) .room-card > input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ROOM TERPILIH */
+body:not(.login-page) .room-card:has(input[type="radio"]:checked) {
+    border: 2px solid #145a9e;
+    box-shadow: 0 12px 30px rgba(20,90,158,.18);
+}
+
+/* FOTO */
+body:not(.login-page) .room-image {
+    width: 100%;
+    height: 190px;
+    background: #edf4f9;
+    overflow: hidden;
+}
+
+body:not(.login-page) .room-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .35s ease;
+}
+
+body:not(.login-page) .room-card:hover .room-image img {
+    transform: scale(1.04);
+}
+
+body:not(.login-page) .room-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7890a3;
+    font-size: 13px;
+    background: linear-gradient(135deg, #edf4f9, #e3edf5);
+}
+
+/* ISI CARD */
+body:not(.login-page) .room-card-body {
+    padding: 18px;
+}
+
+body:not(.login-page) .room-card-body h3 {
+    margin: 0 0 9px;
+    color: #163b5a;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+body:not(.login-page) .room-meta {
+    color: #60798d;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+body:not(.login-page) .room-card-body p {
+    color: #687f91;
+    font-size: 13px;
+    line-height: 1.65;
+    min-height: 42px;
+    margin: 0 0 16px;
+}
+
+/* PILIH RUANGAN */
+body:not(.login-page) .room-card .btn,
+body:not(.login-page) .room-card a.btn,
+body:not(.login-page) .room-card button {
+    display: inline-block;
+    background: #145a9e !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 9px;
+    padding: 9px 15px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .18s ease;
+}
+
+body:not(.login-page) .room-card:hover .btn {
+    background: #0e4b88 !important;
+}
+
+/* FORM DETAIL */
+body:not(.login-page) form > .card {
+    background: #ffffff !important;
+    border: 1px solid #dfe9f2 !important;
+    border-radius: 17px !important;
+    padding: 24px !important;
+    box-shadow: 0 7px 24px rgba(25,60,90,.06);
+}
+
+body:not(.login-page) form > .card h3 {
+    color: #163b5a;
+    font-weight: 800;
+}
+
+/* LABEL */
+body:not(.login-page) form > .card label {
+    display: block;
+    color: #405d73;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+/* INPUT */
+body:not(.login-page) form > .card input,
+body:not(.login-page) form > .card textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d4e1eb;
+    border-radius: 9px;
+    padding: 11px 12px;
+    background: #fbfdff;
+    color: #29465d;
+    outline: none;
+    transition: .18s ease;
+}
+
+body:not(.login-page) form > .card input:focus,
+body:not(.login-page) form > .card textarea:focus {
+    border-color: #4f91c7;
+    box-shadow: 0 0 0 3px rgba(79,145,199,.12);
+    background: #ffffff;
+}
+
+/* KIRIM */
+body:not(.login-page) form > .card button[type="submit"] {
+    margin-top: 18px;
+    background: #145a9e !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 10px;
+    padding: 11px 19px;
+    font-weight: 700;
+    box-shadow: 0 6px 16px rgba(20,90,158,.18);
+}
+
+body:not(.login-page) form > .card button[type="submit"]:hover {
+    background: #0e4b88 !important;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 950px) {
+    body:not(.login-page) .room-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 620px) {
+    body:not(.login-page) .room-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    body:not(.login-page) .room-image {
+        height: 200px;
+    }
+
+    body:not(.login-page) .room-card-body {
+        padding: 16px;
+    }
+
+    body:not(.login-page) form > .card {
+        padding: 18px !important;
+    }
+}
+
+
+/* =========================================================
+   BRILIaNT CENTER — CATALOG + POPUP BOOKING
+   ========================================================= */
+
+.booking-catalog-head {
+    margin-bottom: 22px;
+}
+
+.booking-eyebrow {
+    color: #4f91c7;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.booking-page-title {
+    margin: 0 !important;
+}
+
+.booking-page-subtitle {
+    color: #6b8294;
+    margin: 7px 0 0;
+    font-size: 14px;
+}
+
+.booking-alert {
+    margin-bottom: 18px;
+}
+
+.booking-catalog {
+    margin-top: 0 !important;
+}
+
+.room-select-btn {
+    width: auto;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* MODAL */
+
+.booking-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+    box-sizing: border-box;
+}
+
+.booking-modal.show {
+    display: flex;
+}
+
+.booking-modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 32, 52, .58);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.booking-modal-box {
+    position: relative;
+    z-index: 2;
+    width: min(720px, 100%);
+    max-height: calc(100vh - 44px);
+    overflow-y: auto;
+    background: #ffffff;
+    border: 1px solid #dbe7f0;
+    border-radius: 20px;
+    box-shadow: 0 25px 70px rgba(8, 40, 70, .25);
+    animation: bookingModalIn .2s ease;
+}
+
+@keyframes bookingModalIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.booking-modal-close {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    border: 0;
+    border-radius: 50%;
+    background: #edf4f9;
+    color: #4b6578;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.booking-modal-close:hover {
+    background: #dfeaf2;
+}
+
+.booking-modal-header {
+    padding: 25px 28px 19px;
+    border-bottom: 1px solid #e6eef4;
+    background: linear-gradient(135deg, #f7fbfe, #eef6fb);
+}
+
+.booking-modal-kicker {
+    color: #4f91c7;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 5px;
+}
+
+.booking-modal-header h3 {
+    margin: 0;
+    color: #163b5a;
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.selected-room-display {
+    margin-top: 14px;
+    padding: 11px 13px;
+    border-left: 3px solid #145a9e;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.selected-room-display span {
+    display: block;
+    color: #7890a3;
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.selected-room-display strong {
+    color: #145a9e;
+    font-size: 14px;
+}
+
+.booking-modal-box form {
+    margin: 0;
+}
+
+.booking-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    padding: 22px 28px;
+}
+
+.booking-field {
+    min-width: 0;
+}
+
+.booking-field-full {
+    grid-column: 1 / -1;
+}
+
+.booking-field label {
+    display: block;
+    color: #405d73;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.booking-field label small {
+    color: #7890a3;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.booking-field input,
+.booking-field textarea,
+.booking-field select {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d4e1eb;
+    border-radius: 9px;
+    padding: 10px 11px;
+    background: #fbfdff;
+    color: #29465d;
+    font-family: inherit;
+    font-size: 13px;
+    outline: none;
+    transition: .18s ease;
+}
+
+.booking-field input:focus,
+.booking-field textarea:focus,
+.booking-field select:focus {
+    border-color: #4f91c7;
+    box-shadow: 0 0 0 3px rgba(79,145,199,.12);
+    background: #ffffff;
+}
+
+.booking-field textarea {
+    resize: vertical;
+}
+
+.time-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 8px;
+}
+
+.time-row span {
+    color: #7890a3;
+    font-size: 12px;
+}
+
+.booking-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+    padding: 17px 28px 22px;
+    border-top: 1px solid #e6eef4;
+    background: #fbfdff;
+}
+
+.booking-cancel-btn {
+    background: #edf3f7 !important;
+    color: #496276 !important;
+    border: 0 !important;
+    border-radius: 9px;
+    padding: 10px 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.booking-cancel-btn:hover {
+    background: #e1ebf1 !important;
+}
+
+.booking-submit-btn {
+    background: #145a9e !important;
+    color: #ffffff !important;
+    border: 0 !important;
+    border-radius: 9px;
+    padding: 10px 17px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 5px 14px rgba(20,90,158,.18);
+}
+
+.booking-submit-btn:hover {
+    background: #0e4b88 !important;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+.booking-empty {
+    padding: 30px;
+}
+
+@media (max-width: 620px) {
+
+    .booking-modal {
+        padding: 10px;
+        align-items: flex-end;
+    }
+
+    .booking-modal-box {
+        width: 100%;
+        max-height: calc(100vh - 20px);
+        border-radius: 18px 18px 12px 12px;
+    }
+
+    .booking-modal-header {
+        padding: 21px 18px 16px;
+    }
+
+    .booking-form-grid {
+        grid-template-columns: 1fr;
+        padding: 18px;
+        gap: 13px;
+    }
+
+    .booking-field-full {
+        grid-column: auto;
+    }
+
+    .booking-modal-footer {
+        padding: 14px 18px 18px;
+    }
+
+    .booking-modal-footer button {
+        flex: 1;
+    }
+
+    .time-row {
+        grid-template-columns: 1fr;
+    }
+
+    .time-row span {
+        text-align: center;
+    }
+}
+
+/* =========================================================
+   BRILIaN CENTER — PEMINJAMAN SAYA FINAL UI
+   ========================================================= */
+
+.user-page-heading {
+    margin-bottom: 24px;
+}
+
+.user-page-eyebrow {
+    color: #4f91c7;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.35px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.user-page-heading h2 {
+    margin: 0 !important;
+    color: #163b5a !important;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.user-page-heading p {
+    margin: 7px 0 0;
+    color: #718596;
+    font-size: 13px;
+}
+
+/* =========================
+   STATISTIK
+   ========================= */
+
+.user-booking-stats {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 16px;
+    margin-bottom: 26px !important;
+}
+
+.user-booking-stats .stat-box {
+    min-height: 105px;
+    padding: 20px 22px;
+    box-sizing: border-box;
+    border: 1px solid #e1eaf1;
+    border-radius: 14px;
+    background: rgba(255,255,255,.94);
+    box-shadow: 0 5px 18px rgba(25, 70, 100, .07);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-booking-stats .stat-box .num {
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 800;
+    color: #145a9e;
+    margin-bottom: 8px;
+}
+
+.user-booking-stats .stat-box .label {
+    color: #6d8191;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.user-booking-stats .stat-box:nth-child(2) .num {
+    color: #b17a1b;
+}
+
+.user-booking-stats .stat-box:nth-child(3) .num {
+    color: #28764e;
+}
+
+.user-booking-stats .stat-box:nth-child(4) .num {
+    color: #b34c45;
+}
+
+/* =========================
+   HISTORY CARD
+   ========================= */
+
+.user-history-card {
+    overflow: hidden;
+    border: 1px solid #e1eaf1;
+    border-radius: 15px;
+    background: rgba(255,255,255,.96);
+    box-shadow: 0 7px 25px rgba(25, 70, 100, .08);
+}
+
+.history-card-heading {
+    min-height: 76px;
+    padding: 18px 22px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    border-bottom: 1px solid #e6edf2;
+}
+
+.history-card-heading h3 {
+    margin: 0 !important;
+    color: #163b5a;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.history-card-heading .user-page-eyebrow {
+    margin-bottom: 3px;
+}
+
+.history-card-heading .btn {
+    min-height: 38px;
+    padding: 9px 16px;
+    border-radius: 9px;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+/* =========================
+   TABLE
+   ========================= */
+
+.user-history-card .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.user-history-card table {
+    width: 100%;
+    min-width: 1180px;
+    border-collapse: collapse;
+}
+
+.user-history-card th {
+    padding: 13px 14px;
+    background: #f5f8fb;
+    color: #587083;
+    border-bottom: 1px solid #dfe8ee;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .35px;
+    white-space: nowrap;
+}
+
+.user-history-card td {
+    padding: 15px 14px;
+    color: #526a7b;
+    border-bottom: 1px solid #edf1f4;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.user-history-card tbody tr {
+    transition: background .15s ease;
+}
+
+.user-history-card tbody tr:hover {
+    background: #f8fbfd;
+}
+
+.user-history-card td strong {
+    color: #244b67;
+    font-weight: 700;
+}
+
+.user-history-card td small {
+    color: #8496a4;
+    font-size: 10px;
+}
+
+/* =========================
+   STATUS
+   ========================= */
+
+.user-history-card .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 72px;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+
+.user-history-card .badge-approved {
+    background: #e7f5ed !important;
+    color: #27734a !important;
+    border: 1px solid #c9e8d6;
+}
+
+.user-history-card .badge-pending {
+    background: #fff4dc !important;
+    color: #966b18 !important;
+    border: 1px solid #f0dfb8;
+}
+
+.user-history-card .badge-rejected {
+    background: #fbe9e8 !important;
+    color: #a4433b !important;
+    border: 1px solid #efcac7;
+}
+
+/* =========================
+   TOMBOL BATALKAN
+   ========================= */
+
+.user-history-card .btn-danger {
+    min-height: 32px;
+    padding: 7px 11px;
+    border-radius: 7px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 950px) {
+    .user-booking-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 620px) {
+
+    .user-page-heading h2 {
+        font-size: 22px;
+    }
+
+    .user-page-heading p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .user-booking-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 11px;
+    }
+
+    .user-booking-stats .stat-box {
+        min-height: 92px;
+        padding: 15px;
+    }
+
+    .user-booking-stats .stat-box .num {
+        font-size: 24px;
+    }
+
+    .user-booking-stats .stat-box .label {
+        font-size: 11px;
+    }
+
+    .history-card-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 17px;
+    }
+
+    .history-card-heading .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .user-history-card th,
+    .user-history-card td {
+        padding: 12px 11px;
+    }
+}
+
+
+/* =========================================================
+   BRILIAN CENTER — ADMIN DASHBOARD
+   ========================================================= */
+
+.admin-dashboard-title {
+    margin: 0 0 6px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #17324d;
+}
+
+.admin-dashboard-subtitle {
+    margin: 0 0 24px;
+    color: #6b7c8f;
+    font-size: 14px;
+}
+
+/* Statistik Admin */
+body:not(.login-page) .grid[style*="margin-bottom: 24px"] {
+    gap: 16px;
+}
+
+body:not(.login-page) .grid[style*="margin-bottom: 24px"] .stat-box {
+    position: relative;
+    overflow: hidden;
+    min-height: 118px;
+    padding: 22px 20px;
+    border: 1px solid #e1e8ef;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(24, 55, 84, 0.06);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+body:not(.login-page) .grid[style*="margin-bottom: 24px"] .stat-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(24, 55, 84, 0.10);
+}
+
+body:not(.login-page) .grid[style*="margin-bottom: 24px"] .stat-box::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #1769aa;
+}
+
+body:not(.login-page) .grid[style*="margin-bottom: 24px"] .stat-box:nth-child(2)::before {
+    background: #7b61a8;
+}
+
+body:not(.login-page) .grid[style*="margin-bottom: 24px"] .stat-box:nth-child(3)::before {
+    background: #d89b18;
+}
+
+body:not(.login-page) .grid[style*="margin-bottom: 24px"] .stat-box:nth-child(4)::before {
+    background: #24945a;
+}
+
+body:not(.login-page) .grid[style*="margin-bottom: 24px"] .stat-box .num {
+    color: #17324d;
+    font-size: 30px;
+    font-weight: 750;
+    line-height: 1.1;
+}
+
+body:not(.login-page) .grid[style*="margin-bottom: 24px"] .stat-box .label {
+    margin-top: 8px;
+    color: #6b7c8f;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Card pengajuan */
+body:not(.login-page) .card {
+    border: 1px solid #e1e8ef;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(24, 55, 84, 0.05);
+}
+
+body:not(.login-page) .card .flex-between h3 {
+    color: #17324d;
+    font-size: 18px;
+}
+
+/* Tombol outline */
+body:not(.login-page) .btn-outline {
+    background: #ffffff !important;
+    color: #1769aa !important;
+    border: 1px solid #1769aa !important;
+}
+
+body:not(.login-page) .btn-outline:hover {
+    background: #1769aa !important;
+    color: #ffffff !important;
+}
+
+/* Tabel dashboard */
+body:not(.login-page) .card table th {
+    background: #f4f7fa;
+    color: #526579;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+
+body:not(.login-page) .card table td {
+    color: #334e68;
+    font-size: 13px;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+    .admin-dashboard-title {
+        font-size: 23px;
+    }
+
+    body:not(.login-page) .grid[style*="margin-bottom: 24px"] {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    body:not(.login-page) .grid[style*="margin-bottom: 24px"] {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   BRILIaN CENTER — FINAL BUTTON CONTRAST FIX
+   ========================================================= */
+
+/* Semua tombol non-login harus punya teks putih */
+body:not(.login-page) .btn,
+body:not(.login-page) button.btn,
+body:not(.login-page) input[type="submit"].btn {
+    color: #ffffff !important;
+}
+
+/* Tombol utama */
+body:not(.login-page) .btn-primary,
+body:not(.login-page) .btn:not(.btn-outline):not(.btn-secondary):not(.btn-danger) {
+    background: #1769aa !important;
+    color: #ffffff !important;
+    border-color: #1769aa !important;
+}
+
+body:not(.login-page) .btn-primary:hover,
+body:not(.login-page) .btn:not(.btn-outline):not(.btn-secondary):not(.btn-danger):hover {
+    background: #0f568e !important;
+    color: #ffffff !important;
+}
+
+/* Tombol hijau — khusus aksi tambah/simpan */
+body:not(.login-page) .btn-success {
+    background: #24945a !important;
+    color: #ffffff !important;
+    border-color: #24945a !important;
+}
+
+body:not(.login-page) .btn-success:hover {
+    background: #1c7848 !important;
+    color: #ffffff !important;
+}
+
+/* Tombol danger */
+body:not(.login-page) .btn-danger {
+    background: #c83b3b !important;
+    color: #ffffff !important;
+    border-color: #c83b3b !important;
+}
+
+body:not(.login-page) .btn-danger:hover {
+    background: #a92e2e !important;
+    color: #ffffff !important;
+}
+
+/* Tombol secondary */
+body:not(.login-page) .btn-secondary {
+    background: #667788 !important;
+    color: #ffffff !important;
+    border-color: #667788 !important;
+}
+
+body:not(.login-page) .btn-secondary:hover {
+    background: #526271 !important;
+    color: #ffffff !important;
+}
+
+/* Tombol outline tetap putih */
+body:not(.login-page) .btn-outline {
+    background: #ffffff !important;
+    color: #1769aa !important;
+    border: 1px solid #1769aa !important;
+}
+
+body:not(.login-page) .btn-outline:hover {
+    background: #1769aa !important;
+    color: #ffffff !important;
+}
+
+/* Link yang menggunakan button kecil */
+body:not(.login-page) a.btn-sm {
+    color: #ffffff !important;
+}
+
+/* Pastikan icon/text di dalam tombol ikut putih */
+body:not(.login-page) .btn svg,
+body:not(.login-page) .btn i,
+body:not(.login-page) .btn span {
+    color: inherit !important;
+}
+
+
+/* =========================================================
+   ADMIN — AKSI DAFTAR RUANGAN
+   ========================================================= */
+
+/* Area tombol aksi pada tabel */
+body:not(.login-page) table .btn-sm {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
+/* Edit = biru */
+body:not(.login-page) table .btn-sm:not(.btn-danger):not(.btn-secondary) {
+    background: #1769aa !important;
+    color: #ffffff !important;
+    border-color: #1769aa !important;
+}
+
+body:not(.login-page) table .btn-sm:not(.btn-danger):not(.btn-secondary):hover {
+    background: #0f568e !important;
+    color: #ffffff !important;
+}
+
+/* Hapus = merah */
+body:not(.login-page) table .btn-sm.btn-danger {
+    background: #c83b3b !important;
+    color: #ffffff !important;
+    border-color: #c83b3b !important;
+}
+
+body:not(.login-page) table .btn-sm.btn-danger:hover {
+    background: #a92e2e !important;
+    color: #ffffff !important;
+}
+
+/* Jika tombol menggunakan class btn-outline */
+body:not(.login-page) table .btn-sm.btn-outline {
+    background: #1769aa !important;
+    color: #ffffff !important;
+    border-color: #1769aa !important;
+}
+
+body:not(.login-page) table .btn-sm.btn-outline:hover {
+    background: #0f568e !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   BRILIaN CENTER — ADMIN KELOLA PEMINJAMAN
+   ========================================================= */
+
+.admin-page-heading {
+    margin-bottom: 22px;
+}
+
+.admin-page-title {
+    margin: 0;
+    color: #17324d;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.admin-page-subtitle {
+    margin: 6px 0 0;
+    color: #6b7c8f;
+    font-size: 14px;
+}
+
+.admin-booking-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.admin-bookings-table-wrap {
+    overflow-x: auto;
+}
+
+.admin-bookings-table {
+    min-width: 1500px;
+}
+
+.admin-bookings-table th {
+    white-space: nowrap;
+    background: #f4f7fa !important;
+    color: #526579 !important;
+    font-size: 11px !important;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+}
+
+.admin-bookings-table td {
+    vertical-align: middle;
+    color: #334e68;
+    font-size: 13px;
+}
+
+.booking-user-cell strong,
+.booking-user-cell span {
+    display: block;
+}
+
+.booking-user-cell span {
+    margin-top: 3px;
+    font-size: 11px;
+    color: #7a8998;
+}
+
+.booking-time-cell {
+    white-space: nowrap;
+}
+
+.booking-agenda-cell {
+    min-width: 170px;
+    max-width: 240px;
+}
+
+.booking-center-cell {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.booking-action-cell {
+    min-width: 115px;
+}
+
+.booking-action-form {
+    margin: 0 0 6px;
+}
+
+.booking-action-form:last-child {
+    margin-bottom: 0;
+}
+
+/* Setujui = hijau */
+.admin-bookings-table .btn-approve {
+    width: 100%;
+    background: #24945a !important;
+    color: #ffffff !important;
+    border-color: #24945a !important;
+}
+
+.admin-bookings-table .btn-approve:hover {
+    background: #1c7848 !important;
+    color: #ffffff !important;
+}
+
+/* Tolak = merah */
+.admin-bookings-table .btn-danger {
+    width: 100%;
+    background: #c83b3b !important;
+    color: #ffffff !important;
+    border-color: #c83b3b !important;
+}
+
+.admin-bookings-table .btn-danger:hover {
+    background: #a92e2e !important;
+    color: #ffffff !important;
+}
+
+/* VIP */
+.vip-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #fff0c7;
+    color: #8a6500;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.vip-badge.vip-no {
+    background: #edf1f5;
+    color: #64748b;
+}
+
+.admin-note {
+    min-width: 120px;
+    max-width: 180px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #68798b;
+}
+
+.admin-note span {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 700;
+    color: #526579;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .admin-page-title {
+        font-size: 23px;
+    }
+
+    .admin-bookings-table {
+/* Pastikan tidak ada efek transparan dari parent */
+.admin-bookings-table td {
+
+
+/* =========================================================
+   ADMIN PEMINJAMAN - STATUS HOVER + CLICK
+   ========================================================= */
+
+.admin-bookings-table td .badge {
+    display: inline-block !important;
+    padding: 5px 11px !important;
+    border-radius: 20px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    cursor: pointer;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Muncul saat diarahkan */
+.admin-bookings-table td .badge:hover {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Status yang sudah diklik tetap terlihat */
+.admin-bookings-table td .badge.status-selected {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Warna status */
+.admin-bookings-table td .badge-pending {
+    background: #fff0c2 !important;
+    color: #8a6500 !important;
+    border: 1px solid #f0d77a !important;
+}
+
+.admin-bookings-table td .badge-approved {
+    background: #dff5e8 !important;
+    color: #18733f !important;
+    border: 1px solid #a9dfbf !important;
+}
+
+.admin-bookings-table td .badge-rejected {
+    background: #fde3e3 !important;
+    color: #a52a2a !important;
+    border: 1px solid #efb0b0 !important;
+}
+
+
+/* =========================================================
+   ADMIN PEMINJAMAN - STATUS INTERAKTIF FINAL
+   ========================================================= */
+
+.admin-bookings-table td .badge {
+    display: inline-block !important;
+    padding: 5px 11px !important;
+    border-radius: 20px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+/* Hover = tampil sementara */
+.admin-bookings-table td .badge:hover {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Klik = tetap tampil */
+.admin-bookings-table td .badge.status-selected {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Warna */
+.admin-bookings-table td .badge-pending {
+    background: #fff0c2 !important;
+    color: #8a6500 !important;
+    border: 1px solid #f0d77a !important;
+}
+
+.admin-bookings-table td .badge-approved {
+    background: #dff5e8 !important;
+    color: #18733f !important;
+    border: 1px solid #a9dfbf !important;
+}
+
+.admin-bookings-table td .badge-rejected {
+    background: #fde3e3 !important;
+    color: #a52a2a !important;
+    border: 1px solid #efb0b0 !important;
+}
+
+
+/* =========================================================
+   ADMIN PEMINJAMAN - STATUS FINAL
+   ========================================================= */
+
+.admin-bookings-table td .badge,
+.admin-bookings-table td .badge-pending,
+.admin-bookings-table td .badge-approved,
+.admin-bookings-table td .badge-rejected {
+    display: inline-block !important;
+    padding: 5px 11px !important;
+    border-radius: 20px !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+    border: 1px solid #1d4ed8 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    cursor: default !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+.admin-bookings-table td .badge:hover,
+.admin-bookings-table td .badge-pending:hover,
+.admin-bookings-table td .badge-approved:hover,
+.admin-bookings-table td .badge-rejected:hover {
+    background: #2563eb !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: none !important;
+    animation: none !important;
+}
+
+
+/* FIX STATUS BADGE - TETAP TERLIHAT SAAT HOVER */
+.admin-bookings-table .badge,
+.admin-bookings-table .badge-pending,
+.admin-bookings-table .badge-approved,
+.admin-bookings-table .badge-rejected {
+    color: #ffffff !important;
+    transition: none !important;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.admin-bookings-table .badge-pending:hover {
+    background: var(--warning) !important;
+    color: #ffffff !important;
+}
+
+.admin-bookings-table .badge-approved:hover {
+    background: var(--success) !important;
+    color: #ffffff !important;
+}
+
+.admin-bookings-table .badge-rejected:hover {
+    background: var(--danger) !important;
+    color: #ffffff !important;
+}
+
+
+/* FILTER ADMIN - WARNA BIRU & TEKS TETAP TERLIHAT */
+.admin-booking-filter .admin-filter-btn {
+    background: #2563eb !important;
+    color: #ffffff !important;
+    border: 1px solid #2563eb !important;
+}
+
+.admin-booking-filter .admin-filter-btn:hover,
+.admin-booking-filter .admin-filter-btn:focus,
+.admin-booking-filter .admin-filter-btn:active {
+    background: #2563eb !important;
+    color: #ffffff !important;
+    border-color: #2563eb !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Menonaktifkan efek hover berubah warna penuh pada tombol filter */
+.btn-outline:hover {
+    background: transparent;
+    color: var(--primary);
+}

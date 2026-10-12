@@ -1,0 +1,283 @@
+﻿/* =========================================================
+   BRILIaN CENTER — AUTH CREAM & WHITE
+   Login + Register
+   Visual only — tidak mengubah logic
+   ========================================================= */
+
+/* =========================
+   LOGIN
+   ========================= */
+
+body.login-page {
+    background: #F7F3EA !important;
+    color: #3F3A33 !important;
+}
+
+body.login-page .auth-wrapper {
+    background:
+        linear-gradient(rgba(247,243,234,.78), rgba(247,243,234,.78)),
+        url("../images/backround-login.png") center center / cover no-repeat !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 100vh !important;
+}
+
+/* Matikan overlay biru lama */
+body.login-page .auth-wrapper::before,
+body.login-page .auth-wrapper::after {
+    background: transparent !important;
+}
+
+/* Brand */
+body.login-page .brand-name,
+body.login-page .auth-brand,
+body.login-page .auth-box h1 {
+    color: #8B7355 !important;
+}
+
+body.login-page .brand-subtitle,
+body.login-page .auth-motto,
+body.login-page .auth-box p.subtitle {
+    color: #756E63 !important;
+}
+
+/* Card login */
+body.login-page .auth-box {
+    background: rgba(255,255,255,.94) !important;
+    border: 1px solid #E3D9C8 !important;
+    box-shadow: 0 24px 60px rgba(63,58,51,.16) !important;
+    color: #3F3A33 !important;
+}
+
+/* Label */
+body.login-page .auth-box form label {
+    color: #5F584F !important;
+}
+
+/* Input */
+body.login-page .input-wrap input {
+    background: #FFFFFF !important;
+    color: #3F3A33 !important;
+    border-color: #E3D9C8 !important;
+}
+
+body.login-page .input-wrap input:focus {
+    border-color: #8B7355 !important;
+    box-shadow: 0 0 0 3px rgba(139,115,85,.12) !important;
+}
+
+/* Icon */
+body.login-page .input-icon {
+    color: #8B7355 !important;
+}
+
+/* Password toggle */
+body.login-page .password-toggle {
+    color: #756E63 !important;
+}
+
+body.login-page .password-toggle:hover {
+    background: rgba(139,115,85,.08) !important;
+}
+
+/* Login button */
+body.login-page .auth-submit {
+    background: #8B7355 !important;
+    border-color: #8B7355 !important;
+    color: #FFFFFF !important;
+    box-shadow: 0 8px 18px rgba(139,115,85,.18) !important;
+}
+
+body.login-page .auth-submit:hover {
+    background: #735E46 !important;
+    border-color: #735E46 !important;
+}
+
+/* Register link */
+body.login-page .register-link {
+    color: #756E63 !important;
+}
+
+body.login-page .register-link a {
+    color: #8B7355 !important;
+}
+
+body.login-page .register-link a:hover {
+    color: #735E46 !important;
+}
+
+body.login-page .auth-footer {
+    color: #756E63 !important;
+}
+
+
+/* =========================
+   REGISTER
+   ========================= */
+
+body.register-page,
+.register-page {
+    min-height: 100vh !important;
+    width: 100% !important;
+
+    background:
+        linear-gradient(rgba(247,243,234,.82), rgba(247,243,234,.82)),
+        url("../images/backround-login.png") center center / cover no-repeat !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 40px 20px !important;
+    box-sizing: border-box !important;
+
+    color: #3F3A33 !important;
+}
+
+/* Hilangkan efek overlay biru */
+body.register-page::before,
+body.register-page::after,
+.register-page::before,
+.register-page::after {
+    background: transparent !important;
+}
+
+/* Card register */
+.register-page .register-card {
+    width: 100% !important;
+    max-width: 500px !important;
+
+    margin: 0 auto !important;
+
+    background: rgba(255,255,255,.96) !important;
+    border: 1px solid #E3D9C8 !important;
+    border-radius: 20px !important;
+
+    box-shadow: 0 24px 60px rgba(63,58,51,.16) !important;
+
+    box-sizing: border-box !important;
+}
+
+/* Brand register */
+.register-page .register-brand,
+.register-page .register-brand h1 {
+    color: #8B7355 !important;
+}
+
+.register-page .register-brand p,
+.register-page .register-footer {
+    color: #756E63 !important;
+}
+
+/* Label */
+.register-page .register-form-group label {
+    color: #5F584F !important;
+}
+
+/* Input */
+.register-page .register-form-group input {
+    background: #FFFFFF !important;
+    color: #3F3A33 !important;
+    border-color: #E3D9C8 !important;
+}
+
+.register-page .register-form-group input:focus {
+    border-color: #8B7355 !important;
+    box-shadow: 0 0 0 3px rgba(139,115,85,.12) !important;
+    outline: none !important;
+}
+
+/* Tombol daftar */
+.register-page .register-submit {
+    background: #8B7355 !important;
+    border-color: #8B7355 !important;
+    color: #FFFFFF !important;
+
+    box-shadow: 0 8px 18px rgba(139,115,85,.18) !important;
+}
+
+.register-page .register-submit:hover {
+    background: #735E46 !important;
+    border-color: #735E46 !important;
+}
+
+/* Link kembali */
+.register-page a {
+    color: #8B7355 !important;
+}
+
+.register-page a:hover {
+    color: #735E46 !important;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+
+    body.login-page .auth-wrapper,
+    body.register-page,
+    .register-page {
+        padding: 20px 14px !important;
+    }
+
+    .register-page .register-card {
+        max-width: 100% !important;
+    }
+}
+
+/* =========================================================
+   LOGIN FINAL FIX — CREAM / WHITE
+   ========================================================= */
+
+body.login-page .brand-mark,
+body.login-page .auth-logo {
+    background: #E8DCC8 !important;
+    color: #8B7355 !important;
+    border: 1px solid #D8C8AF !important;
+    box-shadow: 0 8px 18px rgba(139,115,85,.16) !important;
+}
+
+body.login-page .input-icon {
+    color: #8B7355 !important;
+    background: transparent !important;
+}
+
+body.login-page .password-toggle {
+    background: #FFFFFF !important;
+    color: #8B7355 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    padding: 5px 7px !important;
+}
+
+body.login-page .password-toggle:hover {
+    background: #EFE7D8 !important;
+    color: #735E46 !important;
+}
+
+body.login-page .auth-submit {
+    background: #8B7355 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #8B7355 !important;
+}
+
+body.login-page .auth-submit:hover,
+body.login-page .auth-submit:focus,
+body.login-page .auth-submit:active {
+    background: #735E46 !important;
+    color: #FFFFFF !important;
+    border-color: #735E46 !important;
+}
+
+body.login-page input:-webkit-autofill,
+body.login-page input:-webkit-autofill:hover,
+body.login-page input:-webkit-autofill:focus {
+    -webkit-text-fill-color: #3F3A33 !important;
+    -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+    box-shadow: 0 0 0 1000px #FFFFFF inset !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+}

@@ -1,0 +1,143 @@
+﻿<style>
+/* =========================================================
+   BRILIaN CENTER - REGISTER PAGE REDESIGN
+   Khusus halaman register, tidak mengubah logic PHP
+   ========================================================= */
+
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+    background:
+        linear-gradient(rgba(10, 42, 80, 0.48), rgba(10, 42, 80, 0.62)),
+        url("assets/images/backround-login.png") center/cover no-repeat fixed;
+}
+
+.register-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.register-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 480px;
+    padding: 34px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    box-shadow: 0 20px 55px rgba(0, 31, 63, 0.28);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.register-brand {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.register-brand .brand-icon {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.register-brand h1 {
+    margin: 0;
+    color: #174ea6;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.register-brand p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.register-form-group {
+    margin-bottom: 17px;
+}
+
+.register-form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.register-form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1e293b;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.register-form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.register-submit {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 16px;
+    background: #2563eb;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.register-submit:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+.register-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.register-footer a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .register-page {
+        padding: 20px 14px;
+    }
+
+    .register-card {
+        padding: 26px 20px;
+        border-radius: 18px;
+    }
+
+    .register-brand h1 {
+        font-size: 24px;
+    }
+}
+</style>
