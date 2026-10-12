@@ -1,4 +1,4 @@
-# BRILIaN CENTER — Sistem Peminjaman Ruangan Berbasis Web
+# BRILIaN CENTER - Sistem Peminjaman Ruangan Berbasis Web
 
 Aplikasi berbasis web untuk mengelola peminjaman ruangan, dengan dua role:
 
