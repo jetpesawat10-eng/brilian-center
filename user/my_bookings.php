@@ -86,7 +86,7 @@ $bookings = $stmt->fetchAll();
 <?php include __DIR__ . '/../includes/header.php'; ?>
 
 <div class="user-page-heading">
-    <div class="user-page-eyebrow">BRILIaN CENTER</div>
+    <div class="user-page-eyebrow">BRILiaN CENTER</div>
     <h2>Peminjaman Saya</h2>
     <p>Kelola dan lihat seluruh riwayat pengajuan peminjaman ruangan Anda.</p>
 </div>

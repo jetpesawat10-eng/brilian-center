@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login - BRILIaN CENTER</title>
+<title>Login - BRILiaN CENTER</title>
 <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/auth-cream.css">
 </head>
@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="auth-brand">
         <div class="brand-mark" aria-hidden="true">B</div>
         <div>
-            <div class="brand-name">BRILIaN CENTER</div>
+            <div class="brand-name">BRILiaN CENTER</div>
             <div class="brand-subtitle">Sistem Informasi Peminjaman Ruangan</div>
         </div>
     </div>
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     <main class="auth-box">
         <div class="auth-logo" aria-hidden="true">B</div>
-        <h1>BRILIaN CENTER</h1>
+        <h1>BRILiaN CENTER</h1>
         <p class="subtitle">Sistem Informasi Peminjaman Ruangan</p>
         <div class="auth-divider"></div>
         <p class="login-intro">Silakan login untuk melanjutkan</p>
@@ -86,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </p>
     </main>
 
-    <footer class="auth-footer">(c) 2025 BRILIaN CENTER. All rights reserved.</footer>
+    <footer class="auth-footer">(c) 2025 BRILiaN CENTER. All rights reserved.</footer>
 </div>
 
 <script>

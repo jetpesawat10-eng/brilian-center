@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="register-brand">
             <div class="brand-icon"><i class="bi bi-buildings"></i></div>
-            <h1>BRILIaN CENTER</h1>
+            <h1>BRILiaN CENTER</h1>
             <p>Buat akun untuk mengajukan peminjaman ruangan</p>
         </div>
 

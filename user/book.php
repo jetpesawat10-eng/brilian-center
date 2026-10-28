@@ -126,7 +126,7 @@ require_once __DIR__ . '/../includes/header.php';
 
 <div class="booking-catalog-head">
     <div>
-        <div class="booking-eyebrow">BRILIaN CENTER</div>
+        <div class="booking-eyebrow">BRILiaN CENTER</div>
         <h2 class="booking-page-title">Pilih Ruangan</h2>
         <p class="booking-page-subtitle">
             Pilih ruangan yang sesuai dengan kebutuhan kegiatan Anda.

@@ -191,7 +191,7 @@ $html = '
 <body>
 
 <div class="header">
-    <div class="brand">BRILIaN CENTER</div>
+    <div class="brand">BRILiaN CENTER</div>
     <div class="title">Bukti Peminjaman Ruangan</div>
     <div class="subtitle">
         Dokumen konfirmasi peminjaman ruangan dari sistem SiPeminjaman
@@ -278,7 +278,7 @@ $html = '
 </div>
 
 <div class="footer">
-    BRILIaN CENTER — Bukti peminjaman ini dibuat oleh sistem SiPeminjaman.
+    BRILiaN CENTER — Bukti peminjaman ini dibuat oleh sistem SiPeminjaman.
 </div>
 
 </body>

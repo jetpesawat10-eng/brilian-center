@@ -7,7 +7,7 @@ $base = basePath();
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title><?= isset($pageTitle) ? e($pageTitle) . ' - ' : '' ?>BRILIaN CENTER</title>
+<title><?= isset($pageTitle) ? e($pageTitle) . ' - ' : '' ?>BRILiaN CENTER</title>
 <link rel="stylesheet" href="<?= $base ?>assets/css/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
@@ -17,7 +17,7 @@ $base = basePath();
 
     <div class="brand">
         <span class="brand-building"><i class="bi bi-buildings"></i></span>
-        <span>BRILIaN CENTER</span>
+        <span>BRILiaN CENTER</span>
     </div>
 
     <nav>

@@ -1,5 +1,5 @@
 ﻿/* =========================================================
-   BRILIaN CENTER — CREAM & WHITE THEME
+   BRILiaN CENTER — CREAM & WHITE THEME
    Visual override only
    Tidak mengubah logic PHP / database
    ========================================================= */
@@ -178,7 +178,7 @@ footer {
 }
 
 /* =========================================================
-   BRILIaN CENTER — USER AREA CREAM WHITE FINAL OVERRIDE
+   BRILiaN CENTER — USER AREA CREAM WHITE FINAL OVERRIDE
    ========================================================= */
 
 /* BACKGROUND USER */
@@ -195,7 +195,7 @@ body:not(.login-page) .navbar {
     box-shadow: 0 3px 14px rgba(63,58,51,.07) !important;
 }
 
-/* BRAND BRILIaN CENTER */
+/* BRAND BRILiaN CENTER */
 body:not(.login-page) .navbar .brand {
     color: #8B7355 !important;
 }

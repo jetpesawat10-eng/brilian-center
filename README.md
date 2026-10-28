@@ -1,4 +1,4 @@
-# BRILIaN CENTER — Sistem Peminjaman Ruangan Berbasis Web
+# BRILiaN CENTER — Sistem Peminjaman Ruangan Berbasis Web
 
 Aplikasi berbasis web untuk mengelola peminjaman ruangan, dengan dua role:
 
@@ -65,4 +65,4 @@ Dibangun menggunakan **PHP Native, PDO, dan MySQL**, serta dapat dijalankan seca
 
 ---
 
-**BRILIaN CENTER** — Sistem Peminjaman Ruangan Berbasis Web.
+**BRILiaN CENTER** — Sistem Peminjaman Ruangan Berbasis Web.

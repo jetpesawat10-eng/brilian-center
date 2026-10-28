@@ -39,7 +39,7 @@ if (!$booking) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bukti Peminjaman #<?= (int) $booking['id'] ?> - BRILIaN CENTER</title>
+    <title>Bukti Peminjaman #<?= (int) $booking['id'] ?> - BRILiaN CENTER</title>
 
     <style>
         * { box-sizing: border-box; }
@@ -276,7 +276,7 @@ if (!$booking) {
     <div class="proof-card">
 
         <div class="proof-header">
-            <div class="brand">BRILIaN CENTER</div>
+            <div class="brand">BRILiaN CENTER</div>
             <h1>Bukti Peminjaman Ruangan</h1>
             <p>Dokumen konfirmasi peminjaman ruangan</p>
         </div>
@@ -393,7 +393,7 @@ if (!$booking) {
         </div>
 
         <div class="proof-footer">
-            BRILIaN CENTER — Bukti peminjaman ini dibuat oleh sistem SiPeminjaman.
+            BRILiaN CENTER — Bukti peminjaman ini dibuat oleh sistem SiPeminjaman.
         </div>
 
     </div>
